@@ -76,6 +76,37 @@ footer {
     font-size: 0.9em;
 }
 
+/* Link styles */
+.red-link {
+    color: #ff0000;
+}
+
+.red-link-bold {
+    color: #ff0000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Album cover styles */
+.album-cover {
+    width: 200px;
+    height: 200px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Spotify embed container */
+.spotify-embed-container {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #000000 0%, #ff0000 100%);
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.spotify-embed {
+    border-radius: 12px;
+}
+
 @media (max-width: 768px) {
     nav a {
         margin: 0 10px;
