@@ -1,0 +1,133 @@
+/* Layout styles for main structural elements */
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--gunmetal-dark), var(--dark-bg-red), var(--gunmetal));
+    border-bottom: 4px solid var(--primary-red);
+    border-top: 2px solid var(--gunmetal-light);
+    position: relative;
+    overflow: hidden;
+    animation: headerPulse 4s ease-in-out infinite;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(204, 51, 51, 0.04), rgba(36, 42, 49, 0.08), transparent);
+    animation: headerSweep 6s linear infinite;
+    pointer-events: none;
+}
+
+header img {
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.5));
+    animation: logoGlow 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.05) rotate(2deg);
+    filter: drop-shadow(0 0 40px rgba(255, 68, 68, 1)) drop-shadow(0 0 20px rgba(36, 42, 49, 0.9));
+}
+
+nav {
+    background: var(--gradient-gunmetal);
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8), 0 0 20px var(--shadow-red), 0 0 10px var(--shadow-gunmetal);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: navFlicker 5s ease-in-out infinite;
+    border-bottom: 1px solid var(--gunmetal-light);
+}
+
+nav a {
+    color: var(--primary-red);
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(204, 51, 51, 0.6), 0 0 5px rgba(28, 35, 41, 0.5);
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--highlight-red), var(--gunmetal-light), transparent);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+nav a:hover {
+    color: var(--bright-red);
+    text-shadow: 0 0 20px rgba(255, 68, 68, 1), 0 0 30px rgba(36, 42, 49, 0.8), 0 0 15px rgba(28, 35, 41, 0.6);
+    transform: scale(1.1) translateY(-2px);
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--gradient-section);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9), 0 0 30px var(--shadow-red), 0 0 15px var(--shadow-gunmetal);
+    position: relative;
+    overflow: hidden;
+    animation: sectionFloat 6s ease-in-out infinite;
+    border: 1px solid var(--border-red);
+    border-right: 1px solid var(--border-gunmetal);
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(204, 51, 51, 0.04), rgba(36, 42, 49, 0.08), transparent);
+    animation: sectionScan 8s linear infinite;
+    pointer-events: none;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9), 0 0 50px var(--shadow-red), 0 0 25px var(--shadow-gunmetal);
+    border-color: var(--highlight-red);
+    border-right-color: var(--gunmetal-light);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--gradient-gunmetal);
+    color: var(--text-light);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 0.9em;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.9), 0 0 30px var(--shadow-red), 0 0 15px var(--shadow-gunmetal);
+    border-top: 2px solid var(--primary-red);
+    border-bottom: 1px solid var(--gunmetal-light);
+    animation: footerGlow 3s ease-in-out infinite;
+    z-index: 1000;
+}

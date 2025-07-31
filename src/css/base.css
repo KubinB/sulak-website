@@ -1,0 +1,131 @@
+/* Base styles and foundational elements */
+:root {
+    --primary-red: #cc3333;
+    --accent-red: #aa2222;
+    --highlight-red: #ff4444;
+    --bright-red: #ff6666;
+    --gunmetal: #1c2329;
+    --gunmetal-light: #242a31;
+    --gunmetal-dark: #0f1419;
+    --dark-bg: #000000;
+    --dark-bg-alt: #0a0a0a;
+    --dark-bg-red: #0f0505;
+    --text-light: #f0f0f0;
+    --text-medium: #cccccc;
+    --text-gunmetal: #6a7a87;
+    --border-red: rgba(204, 51, 51, 0.3);
+    --border-gunmetal: rgba(36, 42, 49, 0.5);
+    --shadow-red: rgba(204, 51, 51, 0.4);
+    --shadow-gunmetal: rgba(28, 35, 41, 0.7);
+    --gradient-dark: linear-gradient(45deg, #000000, #0a0a0a, #0f1419, #0f0505);
+    --gradient-section: linear-gradient(135deg, #0a0a0a, #1c2329, #0f0505, #0f1419);
+    --gradient-gunmetal: linear-gradient(135deg, #1c2329, #242a31, #0f1419);
+}
+
+body {
+    background: var(--gradient-dark);
+    background-size: 400% 400%;
+    animation: backgroundShift 8s ease infinite;
+    color: var(--text-light);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0 0 100px 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Sulak character background */
+body::after {
+    content: '';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: 800px;
+    background-image: url('../../assets/images/sulak_color.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    animation: characterFloat 20s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* Glowing particles effect */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(204, 51, 51, 0.04) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(28, 35, 41, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(204, 51, 51, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 60% 30%, rgba(36, 42, 49, 0.07) 0%, transparent 50%);
+    animation: particleFloat 12s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Basic typography */
+h1, h2 {
+    color: var(--primary-red);
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(204, 51, 51, 0.8), 0 0 40px rgba(28, 35, 41, 0.5);
+    animation: titlePulse 2s ease-in-out infinite;
+    position: relative;
+}
+
+p, ul {
+    color: var(--text-medium);
+    font-size: 1.1em;
+    animation: fadeInUp 1s ease-out;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 15px 0;
+    padding: 15px;
+    background: var(--gradient-gunmetal);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary-red);
+    border-right: 2px solid var(--gunmetal-light);
+    position: relative;
+    overflow: hidden;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 68, 68, 0.1), rgba(36, 42, 49, 0.12), transparent);
+    transition: left 0.5s ease;
+}
+
+ul li:hover::before {
+    left: 100%;
+}
+
+ul li:hover {
+    transform: translateX(10px) scale(1.02);
+    box-shadow: 0 8px 25px var(--shadow-red), 0 4px 15px var(--shadow-gunmetal);
+    border-left-color: var(--highlight-red);
+    border-right-color: var(--gunmetal-light);
+    background: linear-gradient(135deg, var(--gunmetal-dark), var(--accent-red), var(--gunmetal));
+}

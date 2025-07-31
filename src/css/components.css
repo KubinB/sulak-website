@@ -1,0 +1,84 @@
+/* Component styles for specific elements */
+
+/* Link styles */
+.red-link {
+    color: var(--primary-red);
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px rgba(204, 51, 51, 0.6), 0 0 5px rgba(28, 35, 41, 0.5);
+    position: relative;
+}
+
+.red-link:hover {
+    color: var(--bright-red);
+    text-shadow: 0 0 20px rgba(255, 68, 68, 1), 0 0 30px rgba(36, 42, 49, 0.8), 0 0 15px rgba(28, 35, 41, 0.6);
+    transform: scale(1.05);
+}
+
+.red-link-bold {
+    color: var(--primary-red);
+    font-weight: bold;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 15px rgba(204, 51, 51, 0.7), 0 0 8px rgba(28, 35, 41, 0.6);
+    animation: linkGlow 2s ease-in-out infinite;
+}
+
+.red-link-bold:hover {
+    color: var(--bright-red);
+    text-shadow: 0 0 30px rgba(255, 102, 102, 1), 0 0 50px rgba(36, 42, 49, 0.9), 0 0 25px rgba(28, 35, 41, 0.7);
+    transform: scale(1.1) rotate(1deg);
+}
+
+/* Album cover styles */
+.album-cover {
+    width: 200px;
+    height: 200px;
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 15px;
+    border: 3px solid var(--primary-red);
+    box-shadow: 0 0 30px var(--shadow-red), 0 0 15px var(--shadow-gunmetal);
+    transition: all 0.5s ease;
+}
+
+.album-cover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px var(--shadow-red), 0 0 60px rgba(255, 68, 68, 0.4), 0 0 25px var(--shadow-gunmetal);
+    border-color: var(--highlight-red);
+}
+
+/* Spotify embed container */
+.spotify-embed-container {
+    margin-top: 20px;
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--gunmetal) 50%, var(--dark-bg-red) 100%);
+    padding: 20px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    animation: embedPulse 4s ease-in-out infinite;
+    box-shadow: 0 0 40px var(--shadow-red), 0 0 20px var(--shadow-gunmetal);
+}
+
+.spotify-embed-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--highlight-red), var(--gunmetal-light), var(--bright-red), var(--gunmetal));
+    border-radius: 25px;
+    z-index: -1;
+    animation: borderRotate 3s linear infinite;
+}
+
+.spotify-embed {
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.spotify-embed:hover {
+    transform: scale(1.02);
+}
