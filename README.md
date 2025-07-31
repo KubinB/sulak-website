@@ -2,7 +2,7 @@
 
 # Sulak Website
 
-Welcome to the Sulak Band website project! This project serves as the official website for the Sulak Band, showcasing their latest releases, merchandise, and music.
+Welcome to the Sulak Band website repo, This project serves as the official website for the Sulak Band.
 
 ## Project Structure
 
