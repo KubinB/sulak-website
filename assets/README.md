@@ -1,0 +1,2 @@
+# FILE: /sulak-website/sulak-website/assets/README.md
+This directory contains additional resources and files related to the Sulak website project. It may include images, fonts, or other assets that enhance the website's functionality and appearance. Future additions to this directory should be documented here to maintain clarity and organization.
