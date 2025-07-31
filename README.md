@@ -35,7 +35,7 @@ To get a local copy up and running, follow these simple steps:
    cd sulak-website
    ```
 
-3. Open `src/index.html` in your web browser to view the website.
+3. Open `index.html` in your web browser to view the website.
 
 ## Contributing
 
