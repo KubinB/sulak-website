@@ -11,13 +11,15 @@ The project is organized as follows:
 ```
 sulak-website
 ├── src
-│   ├── index.html        # Main HTML structure of the website
 │   ├── css
 │   │   └── styles.css    # CSS styles for the website
 │   └── js
 │       └── scripts.js    # JavaScript for interactive features
 ├── assets
+│   ├── Images            # Graphical resources for the site
 │   └── README.md         # Documentation for additional resources
+|
+├── index.html            # Main HTML structure of the website
 └── README.md             # Overview and instructions for the project
 ```
 
