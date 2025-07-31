@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Disallow access to sensitive directories
+Disallow: /src/
+Disallow: /.git/
+Disallow: /.htaccess
+Disallow: /README.md
+
+# Sitemap location (update with your actual domain)
+# Sitemap: https://yourdomain.com/sitemap.xml

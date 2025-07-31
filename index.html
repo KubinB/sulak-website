@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sulak - Official Website</title>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; frame-src https://open.spotify.com; connect-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
+    <!-- Privacy and Security -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
     <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
@@ -35,7 +47,7 @@
         <h2>Information</h2>
         <p>Sulak is a metal band hailing from DFW. Formed in 2024, our debut album "Dark Waters" is out now on all streaming platforms!</p>
         <p>Contact us at: <a href="mailto:sulakband@gmail.com" class="red-link">sulakband@gmail.com</a></p>
-        <p>Find all our links in one place: <a href="https://linktr.ee/sulakband" class="red-link-bold">🔗 Sulak Linktree</a></p>
+        <p>Find all our links in one place: <a href="https://linktr.ee/sulakband" class="red-link-bold" rel="noopener noreferrer" target="_blank">🔗 Sulak Linktree</a></p>
     </section>
 
     <section id="releases">
@@ -44,27 +56,27 @@
         <ul>
             <li>
                 <img src="assets/images/album-art/album_cover.jpeg" alt="Dark Waters Album Cover" class="album-cover">
-                Album 1: <a href="https://tr.ee/_pm_Be330i" class="red-link">Dark Waters (2025)</a>
+                Album 1: <a href="https://tr.ee/_pm_Be330i" class="red-link" rel="noopener noreferrer" target="_blank">Dark Waters (2025)</a>
             </li>
         </ul>
         <div class="spotify-embed-container">
-            <iframe class="spotify-embed" src="https://open.spotify.com/embed/album/4UUM9nl9gHdeI4mBvW8C8F?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe class="spotify-embed" src="https://open.spotify.com/embed/album/4UUM9nl9gHdeI4mBvW8C8F?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" sandbox="allow-scripts allow-same-origin allow-presentation"></iframe>
         </div>
     </section>
 
     <section id="merch">
         <h2>Merch</h2>
         <p>Get your Sulak gear:</p>
-        <p>Shop now at our online store: <a href="https://sulak-merch.myspreadshop.com/" class="red-link">Sulak Merch Store</a></p>
+        <p>Shop now at our online store: <a href="https://sulak-merch.myspreadshop.com/" class="red-link" rel="noopener noreferrer" target="_blank">Sulak Merch Store</a></p>
     </section>
 
     <section id="music">
         <h2>Music</h2>
         <p>Stream our music on your favorite platforms:</p>
         <ul>
-            <li>Spotify: <a href="https://open.spotify.com/artist/6pfG0NPzvBpViWQalACP6d?si=pfVJ2jNoRPGU9XqfP5kmnw" class="red-link">Listen on Spotify</a></li>
-            <li>Apple Music: <a href="https://music.apple.com/us/artist/sulak/1772577861" class="red-link">Listen on Apple Music</a></li>
-            <li>YouTube: <a href="https://www.youtube.com/@SulakBand" class="red-link">Watch on YouTube</a></li>
+            <li>Spotify: <a href="https://open.spotify.com/artist/6pfG0NPzvBpViWQalACP6d?si=pfVJ2jNoRPGU9XqfP5kmnw" class="red-link" rel="noopener noreferrer" target="_blank">Listen on Spotify</a></li>
+            <li>Apple Music: <a href="https://music.apple.com/us/artist/sulak/1772577861" class="red-link" rel="noopener noreferrer" target="_blank">Listen on Apple Music</a></li>
+            <li>YouTube: <a href="https://www.youtube.com/@SulakBand" class="red-link" rel="noopener noreferrer" target="_blank">Watch on YouTube</a></li>
         </ul>
     </section>
 
