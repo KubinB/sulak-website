@@ -32,4 +32,66 @@
         height: 400px;
         opacity: 0.08;
     }
+    
+    /* Contact section mobile styles */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .contact-item {
+        padding: 15px;
+    }
+    
+    .booking-notice {
+        padding: 15px;
+    }
+    
+    /* Demon lore mobile styles */
+    .demon-lore {
+        padding: 15px;
+        margin-top: 15px;
+    }
+    
+    .demon-lore h3 {
+        font-size: 1.1em;
+    }
+    
+    .demon-lore p:last-child {
+        font-size: 1em;
+    }
+    
+    /* Shows section mobile styles */
+    .upcoming-banner {
+        padding: 15px;
+    }
+    
+    .booking-btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    
+    .shows-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .show-card {
+        margin-bottom: 10px;
+    }
+    
+    .show-flyer {
+        height: 250px;
+    }
+    
+    .show-info {
+        padding: 12px;
+    }
+    
+    .show-date-compact {
+        top: -20px;
+        right: 12px;
+        font-size: 0.75em;
+        padding: 4px 8px;
+    }
 }

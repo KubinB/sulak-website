@@ -1,13 +1,44 @@
 /* Special visual effects and themed styles */
 
-/* Special effects for metal theme */
+/* Special effects text */
 .metal-text {
-    background: linear-gradient(45deg, var(--highlight-red), var(--gunmetal-light), var(--bright-red), var(--text-gunmetal));
-    background-size: 200% 200%;
+    color: var(--text-light);
+    text-shadow: 
+        1px 1px 3px rgba(28, 35, 41, 0.6),
+        0px 0px 12px rgba(204, 51, 51, 0.5),
+        0px 0px 20px rgba(255, 68, 68, 0.3),
+        0px 0px 30px rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    position: relative;
+    background: linear-gradient(135deg, 
+        #ffffff 0%, 
+        #f8f8f8 15%,
+        #e0e0e0 30%, 
+        #f5f5f5 45%,
+        #ffffff 60%,
+        #d8d8d8 75%, 
+        #f0f0f0 90%,
+        #ffffff 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: metalShine 2s ease-in-out infinite;
+    filter: drop-shadow(0 0 8px rgba(204, 51, 51, 0.4)) drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+    transform: scale(1.02);
+    /* Fallback for better readability */
+    background-color: var(--text-light);
+}
+
+@supports not (-webkit-background-clip: text) {
+    .metal-text {
+        color: var(--text-light);
+        text-shadow: 
+            1px 1px 3px rgba(28, 35, 41, 0.6),
+            0px 0px 12px rgba(204, 51, 51, 0.5),
+            0px 0px 20px rgba(255, 68, 68, 0.3),
+            0px 0px 30px rgba(255, 255, 255, 0.1);
+        transform: scale(1.02);
+    }
 }
 
 /* Fire effect for headings */
