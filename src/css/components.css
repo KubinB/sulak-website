@@ -524,9 +524,10 @@
 
 /* Band Member Bios Grid */
 .band-members-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 60px;
     margin: 30px 0;
 }
 
@@ -546,6 +547,7 @@
     box-shadow: 0 0 20px rgba(28, 35, 41, 0.5);
     position: relative;
     overflow: hidden;
+    width: 300px;
 }
 
 .member-card::before {
@@ -643,5 +645,5 @@
     line-height: 1.6;
     font-size: 0.9em;
     margin: 0;
-    text-align: left;
+    text-align: center;
 }
