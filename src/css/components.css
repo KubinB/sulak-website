@@ -59,6 +59,25 @@
     box-shadow: 0 0 40px var(--shadow-red), 0 0 20px var(--shadow-gunmetal);
 }
 
+.embed-wrapper {
+    position: relative;
+}
+
+.embed-click-hint {
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(28, 35, 41, 0.8);
+    border-radius: 10px;
+    border: 1px solid var(--primary-red);
+}
+
+.embed-click-hint p {
+    margin: 0;
+    font-size: 0.9em;
+    color: var(--text-light);
+}
+
 .spotify-embed-container::before {
     content: '';
     position: absolute;
