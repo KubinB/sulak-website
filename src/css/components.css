@@ -522,6 +522,28 @@
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
 }
 
+/* Button icon styles */
+.btn-icon-circle {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-red);
+    margin-right: 8px;
+    vertical-align: middle;
+    overflow: hidden;
+    line-height: 24px;
+    text-align: center;
+}
+
+.btn-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
 /* Band Member Bios Grid */
 .band-members-grid {
     display: flex;
