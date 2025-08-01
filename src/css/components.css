@@ -93,13 +93,11 @@
     color: var(--text-light);
 }
 
-/* Button row styles */
 .button-row {
     display: flex;
     gap: 15px;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: center;
 }
 
 .spotify-embed-container::before {
@@ -265,12 +263,6 @@
     text-decoration: none;
     transition: all 0.3s ease;
     font-weight: bold;
-    /* Mobile optimization */
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-    user-select: none;
-    min-height: 20px;
-    line-height: 1.4;
 }
 
 .booking-btn:hover {
@@ -527,12 +519,6 @@
     position: relative;
     z-index: 1;
     text-shadow: 0 0 10px rgba(255, 68, 68, 0.3);
-    /* Mobile optimization */
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-    user-select: none;
-    min-height: 20px;
-    line-height: 1.4;
 }
 
 .platform-btn:hover {

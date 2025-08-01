@@ -47,10 +47,6 @@ nav {
     z-index: 1000;
     animation: navFlicker 5s ease-in-out infinite;
     border-bottom: 1px solid var(--gunmetal-light);
-    /* Mobile optimization */
-    -webkit-overflow-scrolling: touch;
-    overflow-x: auto;
-    overflow-y: hidden;
 }
 
 nav a {
