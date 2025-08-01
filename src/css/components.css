@@ -93,6 +93,13 @@
     color: var(--text-light);
 }
 
+.button-row {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .spotify-embed-container::before {
     content: '';
     position: absolute;
