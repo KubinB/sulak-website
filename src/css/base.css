@@ -41,8 +41,8 @@ body::after {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 800px;
-    height: 800px;
+    width: 1200px;
+    height: 1200px;
     background-image: url('../../assets/images/sulak_color.png');
     background-size: contain;
     background-repeat: no-repeat;
