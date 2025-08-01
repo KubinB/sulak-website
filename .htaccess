@@ -23,16 +23,16 @@
     Header unset X-Powered-By
 </IfModule>
 
-# Disable server signature
-ServerTokens Prod
-
 # Prevent access to sensitive files
 <FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak)$">
     Require all denied
 </FilesMatch>
 
 # Prevent access to version control directories
-RedirectMatch 404 /\.git
+<Files ~ "^\.git">
+    Order allow,deny
+    Deny from all
+</Files>
 
 # Force HTTPS (uncomment when SSL is configured)
 # RewriteEngine On

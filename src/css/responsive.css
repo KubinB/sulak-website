@@ -1,15 +1,261 @@
 /* Responsive design styles */
 
-@media (max-width: 768px) {
+/* Mobile-first responsive breakpoints */
+@media (max-width: 480px) {
+    /* Extra small devices - phones */
+    nav {
+        padding: 10px 0;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    
     nav a {
-        margin: 0 10px;
+        display: inline-block;
+        margin: 0 8px;
+        font-size: 0.9em;
+        letter-spacing: 1px;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+    
+    nav a:hover {
+        background: rgba(204, 51, 51, 0.2);
+    }
+    
+    section {
+        padding: 15px;
+        margin: 15px 5px;
+        border-radius: 10px;
+    }
+    
+    h1, h2 {
+        font-size: 1.3em;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+    
+    h3 {
+        font-size: 1.1em;
+        margin-bottom: 12px;
+    }
+    
+    /* Header adjustments */
+    header {
+        padding: 20px 10px;
+    }
+    
+    header img {
+        max-width: 280px;
+        margin-bottom: 15px;
+    }
+    
+    /* Music platform cards - stack vertically */
+    .music-platforms-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin: 20px 0;
+    }
+    
+    .platform-card {
+        padding: 20px 15px;
+    }
+    
+    .platform-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+    }
+    
+    .platform-btn {
+        padding: 10px 18px;
+        font-size: 0.9em;
+    }
+    
+    /* Band member bios - single column */
+    .band-members-grid {
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .member-card {
+        width: 100%;
+        max-width: 280px;
+        padding: 20px;
+    }
+    
+    .member-photo {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
+    }
+    
+    .member-info h3 {
+        font-size: 1.3em;
+    }
+    
+    .member-role {
+        font-size: 0.85em;
+        margin-bottom: 12px;
+    }
+    
+    .member-bio {
+        font-size: 0.85em;
+        line-height: 1.5;
+    }
+    
+    /* Shows grid - single column */
+    .shows-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .show-card {
+        margin-bottom: 8px;
+    }
+    
+    .show-flyer {
+        height: 200px;
+    }
+    
+    .show-info {
+        padding: 10px;
+    }
+    
+    .show-date-compact {
+        top: -18px;
+        right: 10px;
+        font-size: 0.7em;
+        padding: 3px 6px;
+    }
+    
+    /* Merch grid - 2 columns */
+    .merch-preview-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin: 20px 0;
+    }
+    
+    .merch-item {
+        padding: 15px;
+    }
+    
+    .merch-image {
+        height: 150px;
+        margin-bottom: 10px;
+    }
+    
+    .merch-item h4 {
+        font-size: 0.95em;
+    }
+    
+    /* Releases section */
+    .spotify-embed-container {
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 15px;
+    }
+    
+    .spotify-embed {
+        min-height: 380px;
+    }
+    
+    .button-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .button-row .platform-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Contact grid - single column */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .contact-item {
+        padding: 12px;
+    }
+    
+    .booking-notice {
+        padding: 12px;
+        margin-top: 15px;
+    }
+    
+    /* Demon lore adjustments */
+    .demon-lore {
+        padding: 15px;
+        margin-top: 15px;
+    }
+    
+    .demon-lore h3 {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+    
+    .demon-lore p {
+        font-size: 0.9em;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+    
+    /* Upcoming banner */
+    .upcoming-banner {
+        padding: 12px;
+        margin-top: 15px;
+    }
+    
+    .booking-btn {
+        padding: 8px 16px;
+        font-size: 0.85em;
+    }
+    
+    /* Button icons */
+    .btn-icon-circle {
+        width: 20px;
+        height: 20px;
+        margin-right: 6px;
+    }
+    
+    /* Album cover */
+    .album-cover {
+        width: 120px;
+        height: 120px;
+    }
+    
+    /* Adjust Sulak character for mobile */
+    body::after {
+        width: 300px;
+        height: 300px;
+        opacity: 0.06;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 15px;
+        font-size: 0.8em;
+    }
+    
+    body {
+        padding-bottom: 60px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Tablets and larger phones */
+    nav a {
+        margin: 0 12px;
         font-size: 1em;
         letter-spacing: 1px;
     }
     
     section {
-        padding: 20px;
-        margin: 20px auto;
+        padding: 25px;
+        margin: 25px 10px;
     }
     
     .album-cover {
@@ -26,14 +272,46 @@
         padding-bottom: 80px;
     }
     
-    /* Adjust Sulak character for mobile */
+    /* Music platforms - 2 columns */
+    .music-platforms-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* Band members - 2 columns */
+    .band-members-grid {
+        gap: 25px;
+    }
+    
+    .member-card {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Merch grid - 2 columns */
+    .merch-preview-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    /* Shows grid - 2 columns */
+    .shows-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+    
+    .show-flyer {
+        height: 250px;
+    }
+    
+    /* Adjust Sulak character for tablet */
     body::after {
-        width: 400px;
-        height: 400px;
+        width: 500px;
+        height: 500px;
         opacity: 0.08;
     }
     
-    /* Contact section mobile styles */
+    /* Contact section */
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -47,10 +325,10 @@
         padding: 15px;
     }
     
-    /* Demon lore mobile styles */
+    /* Demon lore */
     .demon-lore {
-        padding: 15px;
-        margin-top: 15px;
+        padding: 18px;
+        margin-top: 18px;
     }
     
     .demon-lore h3 {
@@ -61,27 +339,14 @@
         font-size: 1em;
     }
     
-    /* Shows section mobile styles */
+    /* Shows section */
     .upcoming-banner {
-        padding: 15px;
+        padding: 18px;
     }
     
     .booking-btn {
         padding: 10px 20px;
         font-size: 0.9em;
-    }
-    
-    .shows-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .show-card {
-        margin-bottom: 10px;
-    }
-    
-    .show-flyer {
-        height: 250px;
     }
     
     .show-info {
@@ -93,5 +358,104 @@
         right: 12px;
         font-size: 0.75em;
         padding: 4px 8px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Desktop/laptop optimizations */
+    .music-platforms-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .shows-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .merch-preview-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Landscape phone optimizations */
+@media (max-height: 500px) and (orientation: landscape) {
+    header {
+        padding: 15px 20px;
+    }
+    
+    header img {
+        max-width: 200px;
+        margin-bottom: 10px;
+    }
+    
+    nav {
+        padding: 8px 0;
+    }
+    
+    nav a {
+        margin: 0 8px;
+        font-size: 0.9em;
+        padding: 6px 10px;
+    }
+    
+    section {
+        padding: 15px;
+        margin: 15px auto;
+    }
+    
+    h1, h2 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    
+    body::after {
+        width: 250px;
+        height: 250px;
+        opacity: 0.05;
+    }
+    
+    footer {
+        padding: 10px;
+        font-size: 0.75em;
+    }
+    
+    body {
+        padding-bottom: 50px;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    /* Touch devices */
+    nav a {
+        padding: 12px 16px;
+        margin: 0 6px;
+    }
+    
+    .platform-btn,
+    .booking-btn {
+        padding: 12px 20px;
+        font-size: 1em;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .member-card,
+    .show-card,
+    .merch-item,
+    .platform-card {
+        transition: none;
+    }
+    
+    .member-card:active,
+    .show-card:active,
+    .merch-item:active,
+    .platform-card:active {
+        transform: scale(0.98);
     }
 }
