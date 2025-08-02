@@ -1,4 +1,4 @@
-/* Social Media Floating Bar - Metal Style */
+/* Social Media */
 
 .social-float-bar {
     position: fixed;
@@ -112,10 +112,23 @@
 .footer-social-strip {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 15px;
-    margin-bottom: 10px;
+    margin: 10px auto;
     padding: 8px 0;
     border-top: 1px solid var(--border-red);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ensure footer content is centered */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .footer-social-strip .social-icon-link {
@@ -176,7 +189,23 @@
     }
     
     .footer-social-strip {
-        gap: 15px;
+        gap: 12px;
+        padding: 8px 10px;
+        justify-content: center;
+        align-items: center;
+        margin: 8px auto;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 15px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
     }
     
     .header-social-icons {
