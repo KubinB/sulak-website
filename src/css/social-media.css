@@ -1,0 +1,197 @@
+/* Social Media Floating Bar - Metal Style */
+
+.social-float-bar {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: linear-gradient(135deg, var(--gunmetal-dark), var(--dark-bg-red));
+    padding: 20px 12px;
+    border-radius: 25px;
+    border: 2px solid var(--border-red);
+    box-shadow: 0 0 30px var(--shadow-red), 0 0 15px var(--shadow-gunmetal);
+    animation: socialGlow 3s ease-in-out infinite;
+}
+
+.social-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gunmetal);
+    border: 2px solid var(--border-gunmetal);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icon-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 68, 68, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.social-icon-link:hover::before {
+    left: 100%;
+}
+
+.social-icon-link:hover {
+    transform: scale(1.1) rotate(5deg);
+    border-color: var(--highlight-red);
+    box-shadow: 0 0 20px var(--shadow-red);
+}
+
+.social-icon-link img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: brightness(0.9);
+    transition: filter 0.3s ease;
+}
+
+.social-icon-link:hover img {
+    filter: brightness(1.2) drop-shadow(0 0 8px rgba(255, 68, 68, 0.6));
+}
+
+/* Platform-specific colors */
+.social-facebook:hover {
+    background: linear-gradient(135deg, #1877F2, #166FE5);
+    border-color: #1877F2;
+}
+
+.social-instagram:hover {
+    background: linear-gradient(135deg, #E4405F, #FD1D1D, #FCB045);
+    border-color: #E4405F;
+}
+
+.social-tiktok:hover {
+    background: linear-gradient(135deg, #000000, #FF0050);
+    border-color: #FF0050;
+}
+
+.social-email:hover {
+    background: linear-gradient(135deg, var(--primary-red), var(--highlight-red));
+}
+
+.social-youtube:hover {
+    background: linear-gradient(135deg, #ff0000, #cc0000);
+    border-color: #ff4444;
+}
+
+.social-spotify:hover {
+    background: linear-gradient(135deg, #1DB954, #1ed760);
+    border-color: #1DB954;
+}
+
+.social-linktree:hover {
+    background: linear-gradient(135deg, #39E09B, #43E695);
+    border-color: #39E09B;
+}
+
+@keyframes socialGlow {
+    0%, 100% { 
+        box-shadow: 0 0 30px rgba(204, 51, 51, 0.4), 0 0 15px rgba(28, 35, 41, 0.6);
+    }
+    50% { 
+        box-shadow: 0 0 40px rgba(255, 68, 68, 0.6), 0 0 25px rgba(36, 42, 49, 0.8);
+    }
+}
+
+/* Footer Social Strip - Compact Version */
+.footer-social-strip {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    padding: 8px 0;
+    border-top: 1px solid var(--border-red);
+}
+
+.footer-social-strip .social-icon-link {
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+
+.footer-social-strip .social-icon-link img {
+    width: 26px;
+    height: 26px;
+}
+
+/* Specific sizing for TikTok icon */
+.footer-social-strip .social-tiktok img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Header Social Icons (compact) */
+.header-social-icons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 12px;
+    z-index: 100;
+}
+
+.header-social-icons .social-icon-link {
+    width: 35px;
+    height: 35px;
+    background: rgba(28, 35, 41, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.header-social-icons .social-icon-link img {
+    width: 18px;
+    height: 18px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .social-float-bar {
+        right: 10px;
+        padding: 15px 8px;
+        gap: 12px;
+    }
+    
+    .social-icon-link {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .social-icon-link img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .footer-social-strip {
+        gap: 15px;
+    }
+    
+    .header-social-icons {
+        top: 10px;
+        right: 10px;
+        gap: 8px;
+    }
+    
+    .header-social-icons .social-icon-link {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .header-social-icons .social-icon-link img {
+        width: 16px;
+        height: 16px;
+    }
+}
