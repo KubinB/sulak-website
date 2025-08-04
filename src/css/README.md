@@ -1,53 +1,134 @@
-# CSS Organization
+# CSS Architecture - Šulak Website
 
-This document describes the organization of the CSS files for the Sulak website.
+This document describes the modular CSS organization for the Šulak Band website.
 
 ## File Structure
 
 ```
 src/css/
-├── styles.css        # Main CSS file that imports all others
-├── base.css          # Base styles, CSS variables, typography, and foundational elements
-├── animations.css    # All keyframe animations
-├── layout.css        # Header, navigation, sections, footer layout styles
-├── components.css    # Specific components (links, album covers, Spotify embeds)
-├── effects.css       # Special visual effects (metal text, fire text)
-└── responsive.css    # Media queries and responsive design styles
+├── styles.css         # Main CSS file (imports all modules)
+├── base.css           # Variables, typography, foundational styles
+├── animations.css     # All keyframe animations and effects
+├── layout.css         # Header, navigation, sections, footer layout
+├── components.css     # Reusable components (links, embeds, counters)
+├── effects.css        # Special visual effects (metal/fire text)
+├── responsive.css     # Media queries and mobile optimization
+├── social-media.css   # Social media integration and icons
+└── README.md          # This documentation file
+```
+
+## Design System
+
+### CSS Custom Properties (Variables)
+Located in `base.css`, these variables ensure consistency across the site:
+
+```css
+/* Colors */
+--primary-red: #cc3333;        /* Main brand color */
+--highlight-red: #ff4444;      /* Hover and accent color */
+--bright-red: #ff6666;         /* Brightest red for emphasis */
+--gunmetal: #1c2329;           /* Dark backgrounds */
+--gunmetal-dark: #0f1419;      /* Darker backgrounds */
+--gunmetal-light: #242a31;     /* Lighter gunmetal variant */
+--dark-bg: #0a0a0a;            /* Deepest black backgrounds */
+--text-light: #f0f0f0;         /* Primary text color */
+
+/* Gradients */
+--gradient-gunmetal: linear-gradient(135deg, #1c2329, #0f1419);
+--gradient-red: linear-gradient(135deg, #cc3333, #aa2222);
+
+/* Effects */
+--shadow-red: rgba(204, 51, 51, 0.5);
+--shadow-gunmetal: rgba(28, 35, 41, 0.8);
+--border-red: rgba(204, 51, 51, 0.6);
 ```
 
 ## File Descriptions
 
-### styles.css
-The main CSS file that imports all other CSS modules. This is the only file that needs to be linked in the HTML.
+### `styles.css`
+**Purpose:** Main CSS file that imports all other modules
+**Contains:** 
+- Import statements for all CSS modules
+- Base font imports
+- Global reset styles
 
-### base.css
-- CSS custom properties (variables) for colors and gradients
-- Body styles and background effects
-- Basic typography (h1, h2, p, ul, li)
-- Foundational list item styles and hover effects
+### `base.css`
+**Purpose:** Foundation styles and design system
+**Contains:**
+- CSS custom properties (color palette, gradients, shadows)
+- Body styles with animated background
+- Typography hierarchy (h1, h2, h3, p, lists)
+- Base interactive element styles
 
-### animations.css
-All keyframe animations used throughout the site:
-- `backgroundShift` - Animated gradient background
-- `characterFloat` - Sulak character floating animation
-- `particleFloat` - Glowing particle effects
-- `headerPulse`, `navFlicker`, `sectionFloat` - Layout animations
-- `titlePulse`, `fadeInUp`, `slideInLeft` - Typography animations
-- `linkGlow`, `embedPulse`, `borderRotate` - Component animations
-- `metalShine`, `fireFlicker` - Effect animations
+### `animations.css`
+**Purpose:** All keyframe animations used throughout the site
+**Contains:**
+- `backgroundShift` - Animated gradient backgrounds
+- `characterFloat` - Floating Šulak character effects
+- `particleFloat` - Glowing particle animations
+- `headerPulse`, `navFlicker` - UI element animations
+- `titlePulse`, `fadeInUp`, `slideInLeft` - Text animations
+- `linkGlow`, `embedPulse` - Interactive element effects
+- `metalShine`, `fireFlicker` - Special text effects
+- `borderRotate`, `shimmer` - Border and accent animations
 
-### layout.css
-Main structural layout styles:
-- Header with logo and animations
-- Navigation bar with hover effects
+### `layout.css`
+**Purpose:** Main structural layout and positioning
+**Contains:**
+- Header styling with logo positioning and effects
+- Navigation bar with hover states and metal styling
 - Section containers with floating animations
-- Footer with glow effects
+- Footer layout with glow effects and fixed positioning
+- Z-index management for layered elements
 
-### components.css
-Specific component styles:
-- Link styles (`.red-link`, `.red-link-bold`)
-- Album cover styling with hover effects
-- Spotify embed container with rotating border effect
+### `components.css`
+**Purpose:** Reusable component styles
+**Contains:**
+- Link styles (`.red-link`, `.red-link-bold` with glow effects)
+- Album cover styling with hover transformations
+- Spotify embed containers with rotating border effects
+- Platform buttons for streaming services
+- Band member biography cards and layouts
+- Visit counter styling and positioning
+- Grid layouts for merchandise and shows
+
+### `effects.css`
+**Purpose:** Special visual effects and text treatments
+**Contains:**
+- `.metal-text` - Metallic gradient text effect
+- `.fire-text` - Animated fire-like text with flickering
+- Glow effects and text shadows
+- Special hover states with scale and rotation
+- Particle effects and floating elements
+
+### `responsive.css`
+**Purpose:** Mobile optimization and responsive design
+**Contains:**
+- Mobile-first media queries
+- Responsive typography scaling
+- Touch-friendly interaction sizing
+- Mobile navigation adjustments
+- Responsive grid layouts for content
+
+### `social-media.css`
+**Purpose:** Social media integration and icon styling
+**Contains:**
+- Footer social media strip layout
+- Platform-specific hover colors (Facebook blue, Instagram gradient, etc.)
+- Social icon animations and effects
+- Responsive social media positioning
+- Integration with main site theme
+
+## Mobile Optimization
+
+Special attention to mobile experience:
+- **Touch-friendly** button and link sizing
+- **Readable typography** at all screen sizes
+- **Efficient animations** that don't drain battery
+- **Fast loading** through optimized CSS delivery
+- **Accessible interactions** for all users
+
+---
 
 ### effects.css
 Special visual effects:
