@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Šulak - Official Website</title>
     
+    <!-- Performance Optimizations -->
+    <link rel="preload" href="src/css/styles.css" as="style">
+    <link rel="preload" href="assets/images/logo_wht.png" as="image">
+    <link rel="dns-prefetch" href="https://open.spotify.com">
+    <link rel="dns-prefetch" href="https://sulak-merch.myspreadshop.com">
+    
+    <!-- SEO and Social Media -->
+    <meta name="description" content="Šulak - Metal band drawing from ancient Babylonian mythology. Official website featuring music, tour dates, merchandise, and band information.">
+    <meta name="keywords" content="Šulak, metal band, Babylonian mythology, dark metal, heavy music">
+    
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Šulak - Official Website">
+    <meta property="og:description" content="Metal band drawing from ancient Babylonian mythology">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/sulak_color.png">
+    
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; frame-src https://open.spotify.com; connect-src 'self';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -84,8 +100,9 @@
         <span id="visit-count">0</span>
     </div>-->
 
-    <!-- Scripts -->
-    <script src="src/js/section-loader.js"></script>
-    <script src="src/js/scripts.js"></script>
+    <!-- Scripts loaded with defer for better performance -->
+    <script defer src="src/js/section-loader-optimized.js"></script>
+    <script defer src="src/js/scripts.js"></script>
+    <script defer src="src/js/performance-monitor.js"></script>
 </body>
 </html>

@@ -1,5 +1,51 @@
 /* Layout styles for main structural elements */
 
+/* Section loading states to prevent layout shifts */
+.section-loading {
+    min-height: 50px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+    position: relative;
+}
+
+.section-loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid var(--primary-red);
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+.section-loaded {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Prevent layout shifts for section containers */
+#header-container,
+#information-container,
+#music-container,
+#releases-container,
+#shows-container,
+#bios-container,
+#merch-container,
+#origin-container,
+#contact-container,
+#footer-container {
+    min-height: 20px;
+    transition: min-height 0.3s ease-in-out;
+}
+
 header {
     text-align: center;
     padding: 40px 20px;
