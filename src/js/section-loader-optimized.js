@@ -156,7 +156,7 @@ class SectionLoader {
     }
 
     async loadAllSections() {
-        console.log('🚀 Loading Šulak website with performance optimizations...');
+        console.log('Loading Šulak website...');
         
         try {
             // Load critical sections first (priority 1)
