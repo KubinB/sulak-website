@@ -693,6 +693,7 @@
     box-shadow: 0 0 20px rgba(204, 51, 51, 0.4), 0 0 10px rgba(28, 35, 41, 0.6);
     animation: counterGlow 3s ease-in-out infinite;
     backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
 }
 
 .counter-label {
@@ -731,10 +732,24 @@
 /* Mobile adjustments for visit counter */
 @media (max-width: 768px) {
     #visit-counter {
-        bottom: 80px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 0.75em;
-        padding: 6px 12px;
+        bottom: auto;
+        top: 10px;
+        right: 10px;
+        left: auto;
+        transform: none;
+        font-size: 0.7em;
+        padding: 5px 10px;
+        border-radius: 10px;
+        opacity: 0.8;
+    }
+    
+    /* Make counter less prominent on mobile */
+    #visit-counter:hover {
+        opacity: 1;
+    }
+    
+    /* Ensure it doesn't interfere with navigation */
+    nav {
+        margin-top: 50px;
     }
 }
