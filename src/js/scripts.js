@@ -238,7 +238,7 @@ function initializePageFeatures() {
     // Initialize error handling
     initErrorHandling();
     
-    console.log('Šulak website features initialized with performance optimizations');
+    console.log('Website features initialized');
 }
 
 // Initialize when DOM is ready or immediately if already loaded
