@@ -292,6 +292,10 @@
     margin: 0 auto;
 }
 
+a.show-card {
+    text-decoration: none;
+}
+
 .show-card {
     background: var(--dark-bg-alt);
     border-radius: 12px;
