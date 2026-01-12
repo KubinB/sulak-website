@@ -76,6 +76,11 @@
         gap: 15px;
     }
     
+    .shows-grid-center {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+    }
+    
     .show-card {
         margin-bottom: 10px;
     }

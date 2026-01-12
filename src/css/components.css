@@ -309,8 +309,9 @@
 
 .shows-grid-center {
     justify-content: center;
-    max-width: 300px;
-    margin: 0 auto;
+    max-width: 700px; /* Allow space for 2 cards side by side */
+    margin: 0 auto 30px auto; /* Added bottom margin to separate from Book button */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 a.show-card {
