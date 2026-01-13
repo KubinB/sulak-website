@@ -207,6 +207,7 @@
     margin-bottom: 15px;
     color: var(--bright-red);
     text-shadow: 0 0 15px rgba(255, 68, 68, 0.8);
+    text-align: center;
 }
 
 .demon-lore p {
@@ -242,6 +243,24 @@
     box-shadow: 0 4px 15px var(--shadow-red);
     margin-top: 20px;
     text-align: center;
+}
+
+.upcoming-content {
+    max-width: 100%; /* Remove width constraint */
+    margin: 0 auto;
+}
+
+.upcoming-disclaimer {
+    font-size: 0.9em;
+    color: var(--text-light);
+    text-align: center;
+    margin: 5px 0 15px 0;
+    opacity: 0.8;
+}
+
+.upcoming-content .shows-grid {
+    max-width: 900px; /* Constrain just the grid */
+    margin: 0 auto 30px auto; /* Added bottom margin for spacing from Book button */
 }
 
 .upcoming-content h3 {
@@ -282,7 +301,7 @@
 
 .shows-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     max-height: 980px; /* Height for 3 rows of cards to accommodate 6 cards without scrolling */
     overflow-y: auto;
@@ -309,9 +328,8 @@
 
 .shows-grid-center {
     justify-content: center;
-    max-width: 700px; /* Allow space for 2 cards side by side */
+    max-width: 900px; /* Allow space for 3 cards side by side like past shows */
     margin: 0 auto 30px auto; /* Added bottom margin to separate from Book button */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 a.show-card {
