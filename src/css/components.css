@@ -261,6 +261,13 @@
 .upcoming-content .shows-grid {
     max-width: 900px; /* Constrain just the grid */
     margin: 0 auto 30px auto; /* Added bottom margin for spacing from Book button */
+    grid-template-columns: repeat(auto-fit, minmax(250px, max-content)); /* Prevent single card from stretching */
+    justify-content: center; /* Center the grid items */
+}
+
+.upcoming-content .show-card {
+    max-width: 300px; /* Keep consistent card width */
+    width: 100%;
 }
 
 .upcoming-content h3 {
