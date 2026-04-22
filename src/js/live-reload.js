@@ -86,9 +86,13 @@ class LiveReload {
     }
 }
 
-// Initialize live reload
+// Initialize live reload only in local development
+const isLocalDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 const liveReload = new LiveReload();
-liveReload.init();
+
+if (isLocalDev) {
+    liveReload.init();
+}
 
 // Make available globally for manual control
 window.liveReload = liveReload;
