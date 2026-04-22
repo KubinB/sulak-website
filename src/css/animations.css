@@ -158,3 +158,13 @@
     50% { transform: translateX(0%) translateY(0%) rotate(-45deg); }
     100% { transform: translateX(100%) translateY(100%) rotate(-45deg); }
 }
+
+/* Accessibility: Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    /* Disable all animations for users who prefer reduced motion */
+    * {
+        animation-duration: 0s !important;
+        transition-duration: 0s !important;
+    }
+}
+

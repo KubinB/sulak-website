@@ -26,7 +26,6 @@
 .red-link:hover {
     color: var(--bright-red);
     text-shadow: 0 0 20px rgba(255, 68, 68, 1), 0 0 30px rgba(36, 42, 49, 0.8), 0 0 15px rgba(28, 35, 41, 0.6);
-    transform: scale(1.05);
 }
 
 .red-link-bold {
@@ -35,13 +34,12 @@
     text-decoration: underline;
     transition: all 0.3s ease;
     text-shadow: 0 0 15px rgba(204, 51, 51, 0.7), 0 0 8px rgba(28, 35, 41, 0.6);
-    animation: linkGlow 2s ease-in-out infinite;
+    /* Removed: animation: linkGlow 2s ease-in-out infinite; */
 }
 
 .red-link-bold:hover {
     color: var(--bright-red);
     text-shadow: 0 0 30px rgba(255, 102, 102, 1), 0 0 50px rgba(36, 42, 49, 0.9), 0 0 25px rgba(28, 35, 41, 0.7);
-    transform: scale(1.1) rotate(1deg);
 }
 
 /* Album cover styles */
@@ -70,8 +68,8 @@
     border-radius: 25px;
     position: relative;
     overflow: hidden;
-    animation: embedPulse 4s ease-in-out infinite;
     box-shadow: 0 0 40px var(--shadow-red), 0 0 20px var(--shadow-gunmetal);
+    /* Removed: animation: embedPulse 4s ease-in-out infinite; */
 }
 
 .embed-wrapper {
@@ -110,7 +108,7 @@
     background: linear-gradient(45deg, var(--highlight-red), var(--gunmetal-light), var(--bright-red), var(--gunmetal));
     border-radius: 25px;
     z-index: -1;
-    animation: borderRotate 3s linear infinite;
+    /* Removed: animation: borderRotate 3s linear infinite; */
 }
 
 .spotify-embed {
@@ -121,7 +119,6 @@
 }
 
 .spotify-embed:hover {
-    transform: scale(1.02);
 }
 
 /* Contact section styles */
@@ -142,7 +139,6 @@
 }
 
 .contact-item:hover {
-    transform: translateY(-5px);
     box-shadow: 0 8px 25px var(--shadow-red), 0 4px 15px var(--shadow-gunmetal);
     border-color: var(--border-red);
 }
@@ -199,7 +195,7 @@
     background-size: 400% 400%;
     border-radius: 22px;
     z-index: -1;
-    animation: borderPulse 4s ease-in-out infinite;
+    /* Removed: animation: borderPulse 4s ease-in-out infinite; */
 }
 
 .demon-lore h3 {
@@ -750,9 +746,9 @@ a.show-card {
     color: var(--text-light);
     z-index: 1001;
     box-shadow: 0 0 20px rgba(204, 51, 51, 0.4), 0 0 10px rgba(28, 35, 41, 0.6);
-    animation: counterGlow 3s ease-in-out infinite;
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
+    /* Removed: animation: counterGlow 3s ease-in-out infinite; */
 }
 
 .counter-label {
@@ -765,7 +761,7 @@ a.show-card {
     color: var(--highlight-red);
     font-weight: bold;
     text-shadow: 0 0 8px rgba(255, 68, 68, 0.6);
-    animation: countPulse 2s ease-in-out infinite;
+    /* Removed: animation: countPulse 2s ease-in-out infinite; */
 }
 
 @keyframes counterGlow {

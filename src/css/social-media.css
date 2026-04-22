@@ -14,7 +14,7 @@
     border-radius: 25px;
     border: 2px solid var(--border-red);
     box-shadow: 0 0 30px var(--shadow-red), 0 0 15px var(--shadow-gunmetal);
-    animation: socialGlow 3s ease-in-out infinite;
+    /* Removed: animation: socialGlow 3s ease-in-out infinite; */
 }
 
 .social-icon-link {

@@ -25,7 +25,6 @@
 body {
     background: var(--gradient-dark);
     background-size: 400% 400%;
-    animation: backgroundShift 8s ease infinite;
     color: var(--text-light);
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -33,6 +32,7 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     position: relative;
+    /* Removed: animation: backgroundShift 8s ease infinite; */
 }
 
 /* Sulak character background */
@@ -50,8 +50,8 @@ body::after {
     opacity: 0.1;
     transform: translate(-50%, -50%);
     z-index: -2;
-    animation: characterFloat 20s ease-in-out infinite;
     pointer-events: none;
+    /* Removed: animation: characterFloat 20s ease-in-out infinite; */
 }
 
 /* Glowing particles effect */
@@ -66,9 +66,9 @@ body::before {
                 radial-gradient(circle at 80% 20%, rgba(28, 35, 41, 0.08) 0%, transparent 50%),
                 radial-gradient(circle at 40% 80%, rgba(204, 51, 51, 0.03) 0%, transparent 50%),
                 radial-gradient(circle at 60% 30%, rgba(36, 42, 49, 0.07) 0%, transparent 50%);
-    animation: particleFloat 12s ease-in-out infinite;
     pointer-events: none;
     z-index: -1;
+    /* Removed: animation: particleFloat 12s ease-in-out infinite; */
 }
 
 /* Basic typography */
@@ -79,8 +79,8 @@ h1, h2 {
     text-transform: uppercase;
     letter-spacing: 3px;
     text-shadow: 0 0 20px rgba(204, 51, 51, 0.8), 0 0 40px rgba(28, 35, 41, 0.5);
-    animation: titlePulse 2s ease-in-out infinite;
     position: relative;
+    /* Removed: animation: titlePulse 2s ease-in-out infinite; */
 }
 
 p, ul {
@@ -123,7 +123,6 @@ ul li:hover::before {
 }
 
 ul li:hover {
-    transform: translateX(10px) scale(1.02);
     box-shadow: 0 8px 25px var(--shadow-red), 0 4px 15px var(--shadow-gunmetal);
     border-left-color: var(--highlight-red);
     border-right-color: var(--gunmetal-light);
