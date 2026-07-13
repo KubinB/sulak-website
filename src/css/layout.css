@@ -140,6 +140,7 @@ section {
     overflow: hidden;
     border: 1px solid var(--border-red);
     border-right: 1px solid var(--border-gunmetal);
+    scroll-margin-top: 65px;
     /* Removed: animation: sectionFloat 6s ease-in-out infinite; */
 }
 

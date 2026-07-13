@@ -220,6 +220,34 @@ function initErrorHandling() {
     });
 }
 
+// Navigation: smooth scroll and force-load lazy sections on nav click
+function initNavigation() {
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').slice(1);
+
+            const doScroll = () => {
+                const target = document.getElementById(targetId);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            };
+
+            if (document.getElementById(targetId)) {
+                doScroll();
+            } else if (window.sectionLoader) {
+                // Section not yet loaded (lazy) — force load then scroll
+                const container = document.getElementById(targetId + '-container');
+                if (container) {
+                    container.addEventListener('sectionLoaded', () => setTimeout(doScroll, 50), { once: true });
+                    window.sectionLoader.loadSectionManually(targetId + '.html');
+                }
+            }
+        });
+    });
+}
+
 // Main initialization function
 function initializePageFeatures() {
     // Initialize visit counter
@@ -237,6 +265,9 @@ function initializePageFeatures() {
     
     // Initialize error handling
     initErrorHandling();
+
+    // Initialize navigation
+    initNavigation();
     
     console.log('Website features initialized');
 }
